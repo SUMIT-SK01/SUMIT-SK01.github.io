@@ -1,0 +1,10 @@
+.allsongs h1{
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url(media/image.png);
+    /* height: 100vh;
+    width: 100%;
+    /* 
+    background-size: cover;
+    background-position: center; */
+    position: relative;
+}
