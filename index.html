@@ -13,11 +13,13 @@
 		integrity=
 "sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
 		crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body style="background-image: linear-gradient(to right, #fffc00, #ffffff);" class="container" style="margin-top: 50px;
+<body style="background-image: linear-gradient(to right, #9dff00, #c113d1);" class="container" style="margin-top: 50px;
 	width: 50%; height:auto;">
 	
+
 	<h2 class="text-primary" id="text" 
     style="margin-left: 15px; margin-bottom: 10px; font-family: 'Courier New', Courier, monospace;">
 		Hey, Login to your Turfer
@@ -26,6 +28,7 @@
 	<form class="container" id="contactForm">
 		<div class="card">
 			<div class="card-body">
+
 				<div class="form-group">
 					<label for="exampleFormControlInput1">
 						Enter Your Name
@@ -43,6 +46,16 @@
 					<input type="email" class="form-control"
 					id="email" placeholder="name@example.com">
 				</div>
+
+                <div class="form-group">
+					<label for="exampleFormControlInput1">
+						Password
+					</label>
+					
+					<input type="password" class="form-control"
+					id="pwd" placeholder="Password">
+				</div>
+
 			</div>
 			<button type="submit" class="btn btn-primary"
 				style="margin-left: 15px; margin-top: 10px">
@@ -51,9 +64,7 @@
 		</div>
 	</form>
 
-	<script src=
-"https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
-	</script>
+	<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
 	
 	<script>
 		var firebaseConfig = {
@@ -81,8 +92,9 @@
 			// Get values
 			var name = getInputVal('name');
 			var email = getInputVal('email');
+            var pwd = getInputVal('pwd');
 
-			saveMessage(name, email);
+			saveMessage(name, email, pwd);
 			document.getElementById('contactForm').reset();
 		}
 
@@ -92,11 +104,12 @@
 		}
 
 		// Save message to firebase
-		function saveMessage(name, email) {
+		function saveMessage(name, email, pwd) {
 			var newMessageRef = messagesRef.push();
 			newMessageRef.set({
 				name: name,
 				email: email,
+                pwd: pwd,
 			});
 		}
 	</script>
