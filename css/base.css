@@ -1,25 +1,3 @@
-/**
- * =================================================================== 
- *
- *  Kards v1.0 Base Stylesheet
- *  url: styleshout.com
- *  03-01-2016
- *  ------------------------------------------------------------------
- *  TOC:
- *  01. reset
- *  02. basic/base setup styles
- *  03. grid
- *  04. MISC
- *
- * =================================================================== 
- */
-
-/** 
- * ===================================================================
- * 01. reset - normalize.css v3.0.2 | MIT License | git.io/normalize
- *
- * ------------------------------------------------------------------- 
- */
 html {
 	font-family: sans-serif;
 	-ms-text-size-adjust: 100%;
@@ -240,12 +218,6 @@ th {
 	padding: 0;
 }
 
-/** 
- * ===================================================================
- * 02. basic/base setup styles - (_basic.scss)
- *
- * ------------------------------------------------------------------- 
- */
 html {
 	font-size: 62.5%;
 	box-sizing: border-box;
@@ -273,20 +245,12 @@ button {
 	-webkit-font-smoothing: antialiased;
 }
 
-/**
- * Media - (_basic.scss)
- * ------------------------------------------------------------------- 
- */
 img,
 video {
 	max-width: 100%;
 	height: auto;
 }
 
-/**
- * Typography resets - (_basic.scss)
- * ------------------------------------------------------------------- 
- */
 div,
 dl,
 dt,
@@ -643,10 +607,6 @@ textarea {
 	width: 50%;
 }
 
-/**
- * Clearing for block grid columns. Allow columns with 
- * different heights to align properly.
- */
 .block-1-6 .bgrid:nth-child(6n+1),
 .block-1-4 .bgrid:nth-child(4n+1),
 .block-1-3 .bgrid:nth-child(3n+1),
@@ -868,4 +828,3 @@ textarea {
 	text-align: center;
 }
 
-/*# sourceMappingURL=base.css.map */
